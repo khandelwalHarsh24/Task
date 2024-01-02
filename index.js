@@ -10,7 +10,7 @@ app.use(express.json());
 
 
 app.use('/',(req,res)=>{
-    res.status(200).json({"Message":"Redirect to /api/v1/tasks"});
+    res.status(200).json({"Message":"Please redirect to /api/v1/tasks"});
 })
 
 app.use('/api/v1/tasks',taskRoutes);
