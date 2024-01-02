@@ -9,7 +9,9 @@ const errorhandler=require('./middleware/errorhandler');
 app.use(express.json());
 
 
-
+app.use('/',(req,res)=>{
+    res.status(200).json({"Message":"Please redirect to /api/v1/tasks"});
+})
 
 app.use('/api/v1/tasks',taskRoutes);
 
