@@ -9,6 +9,10 @@ const errorhandler=require('./middleware/errorhandler');
 app.use(express.json());
 
 
+app.use('/',(req,res)=>{
+    res.status(200).json({"Message":"Redirect to /api/v1/tasks"});
+})
+
 app.use('/api/v1/tasks',taskRoutes);
 
 app.use(notfound);
